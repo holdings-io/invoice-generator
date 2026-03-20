@@ -1,0 +1,34 @@
+{
+  "name": "@holdings-io/invoice-generator",
+  "version": "1.0.0",
+  "description": "Generate professional PDF invoices from the command line or programmatically",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "invoice-generator": "./bin/invoice-generator"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["invoice", "pdf", "generator", "billing", "cli"],
+  "author": "Holdings <engineering@holdings.io> (https://getholdings.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holdings-io/invoice-generator.git"
+  },
+  "homepage": "https://getholdings.com/tools/invoice-generator",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "pdfkit": "^0.15.2"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "^0.13.9",
+    "typescript": "^5.7.0"
+  },
+  "files": ["dist", "bin", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=18"
+  }
+}
